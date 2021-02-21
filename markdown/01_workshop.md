@@ -180,7 +180,7 @@ Math.PI
 ```
 
 ## Exercise
-### Drawing triange
+### Drawing triangle
 
 {{index "triangle (exercise)"}}
 
