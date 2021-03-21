@@ -1,48 +1,42 @@
 <!doctype html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Programming Crash Course with JS :: Eloquent JavaScript</title>
-    <link rel=stylesheet href="js/node_modules/codemirror/lib/codemirror.css">
-    <script src="js/acorn_codemirror.js"></script>
-    <link rel=stylesheet href="css/ejs.css">
-    <script src="js/sandbox.js"></script>
-    <script src="js/ejs.js"></script>
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programming Crash Course with JS :: Eloquent JavaScript</title>
+  <link rel=stylesheet href="js/node_modules/codemirror/lib/codemirror.css">
+  <script src="js/acorn_codemirror.js"></script>
+  <link rel=stylesheet href="css/ejs.css">
+  <script src="js/sandbox.js"></script>
+  <script src="js/ejs.js"></script></head>
 
 <article>
-    <nav><a href="index.html" title="cover">◆</a></nav>
+<nav><a href="index.html" title="cover">◆</a> <a href="01_Js_CrashCourse.html" title="next chapter">▶</a></nav>
 
-    <h1>Programming Crash Course with JS</h1>
+<h1>Programming Crash Course with JS</h1>
 
-    <blockquote>
+<blockquote>
 
-        <p><a class="p_ident" id="p_MCf7WKgw/m" href="#p_MCf7WKgw/m" tabindex="-1" role="presentation"></a>Ask
-            Allah(God) for beneficial knowledge and seek refuge with Allah from knowledge that is of no benefit.</p>
+<p><a class="p_ident" id="p_MCf7WKgw/m" href="#p_MCf7WKgw/m" tabindex="-1" role="presentation"></a>Ask Allah(God) for beneficial knowledge and seek refuge with Allah from knowledge that is of no benefit.</p>
 
-        <footer>prophet muhammad</footer>
+<footer>prophet muhammad</footer>
 
-    </blockquote>
+</blockquote>
 
-    <h2><a class="h_ident" id="h_iVXmlv+1Wr" href="#h_iVXmlv+1Wr" tabindex="-1" role="presentation"></a>Printing On
-        Screen</h2>
+<h2><a class="h_ident" id="h_iVXmlv+1Wr" href="#h_iVXmlv+1Wr" tabindex="-1" role="presentation"></a>Printing On Screen</h2>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_Z7LJbUqj/K" href="#c_Z7LJbUqj/K" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">34</span>);</pre>
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Z7LJbUqj/K" href="#c_Z7LJbUqj/K" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">34</span>);</pre>
 
-    <h2><a class="h_ident" id="h_rAGNsfewCX" href="#h_rAGNsfewCX" tabindex="-1" role="presentation"></a>Variables</h2>
+<h2><a class="h_ident" id="h_rAGNsfewCX" href="#h_rAGNsfewCX" tabindex="-1" role="presentation"></a>Variables</h2>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_Rh2EOg0MlK" href="#c_Rh2EOg0MlK" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>;
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Rh2EOg0MlK" href="#c_Rh2EOg0MlK" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>;
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span>);
 <span class="cm-keyword">let</span> <span class="cm-def">z</span><span class="cm-operator">=</span> <span class="cm-number">5</span>;
 <span class="cm-keyword">let</span> <span class="cm-def">h</span><span class="cm-operator">=</span> <span class="cm-number">20</span>;
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">h</span><span class="cm-operator">/</span><span class="cm-variable">z</span>)</pre>
 
-    <h2><a class="h_ident" id="h_/SgWFWjE6O" href="#h_/SgWFWjE6O" tabindex="-1" role="presentation"></a>Controllers</h2>
+<h2><a class="h_ident" id="h_/SgWFWjE6O" href="#h_/SgWFWjE6O" tabindex="-1" role="presentation"></a>Controllers</h2>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_NEudtREHQ3" href="#c_NEudtREHQ3" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span><span class="cm-operator">=</span> <span class="cm-number">4</span>;
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_NEudtREHQ3" href="#c_NEudtREHQ3" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span><span class="cm-operator">=</span> <span class="cm-number">4</span>;
 <span class="cm-keyword">if</span>(<span class="cm-variable">x</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">y</span> ){
 
 }
@@ -51,16 +45,16 @@
 
 }</pre>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_ign0gxlGl1" href="#c_ign0gxlGl1" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_ign0gxlGl1" href="#c_ign0gxlGl1" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
 <span class="cm-keyword">else</span>{}</pre>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_pbJd5cQ2Hy" href="#c_pbJd5cQ2Hy" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_pbJd5cQ2Hy" href="#c_pbJd5cQ2Hy" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
 <span class="cm-keyword">else</span> <span class="cm-keyword">if</span>(){}
 <span class="cm-keyword">else</span>()</pre>
 
-    <h2><a class="h_ident" id="h_K5Yd6h3Axg" href="#h_K5Yd6h3Axg" tabindex="-1" role="presentation"></a>Functions</h2>
+<h2><a class="h_ident" id="h_K5Yd6h3Axg" href="#h_K5Yd6h3Axg" tabindex="-1" role="presentation"></a>Functions</h2>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_ZY7OAvHNLt" href="#c_ZY7OAvHNLt" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">sum</span>(<span class="cm-def">x</span>,<span class="cm-def">y</span>,<span class="cm-def">z</span>){
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_ZY7OAvHNLt" href="#c_ZY7OAvHNLt" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">sum</span>(<span class="cm-def">x</span>,<span class="cm-def">y</span>,<span class="cm-def">z</span>){
     <span class="cm-keyword">return</span> <span class="cm-variable-2">x</span><span class="cm-operator">+</span><span class="cm-variable-2">y</span><span class="cm-operator">+</span><span class="cm-variable-2">z</span> 
 }
 
@@ -77,24 +71,21 @@
     }
 }</pre>
 
-    <h2><a class="h_ident" id="h_Pt8N9JlC2m" href="#h_Pt8N9JlC2m" tabindex="-1" role="presentation"></a>Math</h2>
+<h2><a class="h_ident" id="h_Pt8N9JlC2m" href="#h_Pt8N9JlC2m" tabindex="-1" role="presentation"></a>Math</h2>
 
-    <p><a class="p_ident" id="p_1TuBH33q7X" href="#p_1TuBH33q7X" tabindex="-1" role="presentation"></a><a
-            href="../extras/index.html">General Approach</a></p>
+<p><a class="p_ident" id="p_1TuBH33q7X" href="#p_1TuBH33q7X" tabindex="-1" role="presentation"></a><a href="../extras/index.html">General Approach</a></p>
 
-    <p><a class="p_ident" id="p_56l/JT+aFZ" href="#p_56l/JT+aFZ" tabindex="-1" role="presentation"></a>Second Degree
-        Factor</p>
+<p><a class="p_ident" id="p_56l/JT+aFZ" href="#p_56l/JT+aFZ" tabindex="-1" role="presentation"></a>Second Degree Factor</p>
 
-    <p><a class="p_ident" id="p_RfrjdrWBNN" href="#p_RfrjdrWBNN" tabindex="-1" role="presentation"></a>x^2 + 4x + 4 = 0
-    </p>
+<p><a class="p_ident" id="p_RfrjdrWBNN" href="#p_RfrjdrWBNN" tabindex="-1" role="presentation"></a>x^2 + 4x + 4 = 0</p>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_oAyrzbXEA4" href="#c_oAyrzbXEA4" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">delta</span>(<span class="cm-def">a</span>,<span class="cm-def">b</span>,<span class="cm-def">c</span>){
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_oAyrzbXEA4" href="#c_oAyrzbXEA4" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">delta</span>(<span class="cm-def">a</span>,<span class="cm-def">b</span>,<span class="cm-def">c</span>){
     <span class="cm-keyword">return</span> <span class="cm-variable">Math</span>.<span class="cm-property">sqrt</span>((<span class="cm-variable-2">b</span><span class="cm-operator">*</span><span class="cm-variable-2">b</span>)<span class="cm-operator">-</span>(<span class="cm-number">4</span><span class="cm-operator">*</span><span class="cm-variable-2">a</span><span class="cm-operator">*</span><span class="cm-variable-2">c</span>))
 }</pre>
 
-    <p>x^2 + 4x + 4 = 0</p>
+<p>x^2 + 4x + 4 = 0</p>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_fQ8oz3051l" href="#c_fQ8oz3051l" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">quadraticZero</span>(<span class="cm-def">a</span>,<span class="cm-def">b</span>,<span class="cm-def">c</span>){
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_fQ8oz3051l" href="#c_fQ8oz3051l" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">quadraticZero</span>(<span class="cm-def">a</span>,<span class="cm-def">b</span>,<span class="cm-def">c</span>){
     <span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-variable-2">b</span><span class="cm-operator">/</span><span class="cm-number">2</span><span class="cm-operator">*</span><span class="cm-variable-2">a</span>
 }
 
@@ -106,19 +97,18 @@
     <span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-variable-2">b</span><span class="cm-operator">/</span><span class="cm-number">2</span><span class="cm-operator">*</span><span class="cm-variable-2">a</span>
 }</pre>
 
-    <h2><a class="h_ident" id="h_wYhCh3+Evp" href="#h_wYhCh3+Evp" tabindex="-1" role="presentation"></a>Data Types</h2>
+<h2><a class="h_ident" id="h_wYhCh3+Evp" href="#h_wYhCh3+Evp" tabindex="-1" role="presentation"></a>Data Types</h2>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_6AHWYtcnAe" href="#c_6AHWYtcnAe" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-string">&quot;Hello&quot;</span>;
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_6AHWYtcnAe" href="#c_6AHWYtcnAe" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-string">&quot;Hello&quot;</span>;
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">result</span>)
 <span class="cm-keyword">let</span> <span class="cm-def">y</span><span class="cm-operator">=</span> <span class="cm-string">&quot;world&quot;</span>
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span>)
 <span class="cm-keyword">let</span> <span class="cm-def">z</span><span class="cm-operator">=</span> <span class="cm-number">1</span>;
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span><span class="cm-operator">+</span><span class="cm-variable">z</span>)</pre>
 
-    <h2><a class="h_ident" id="h_AnIPnTi/Tz" href="#h_AnIPnTi/Tz" tabindex="-1" role="presentation"></a>Loops</h2>
+<h2><a class="h_ident" id="h_AnIPnTi/Tz" href="#h_AnIPnTi/Tz" tabindex="-1" role="presentation"></a>Loops</h2>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_Rx+txG0Mzk" href="#c_Rx+txG0Mzk" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">result</span> <span class="cm-operator">=</span><span class="cm-number">0</span>;
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Rx+txG0Mzk" href="#c_Rx+txG0Mzk" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">result</span> <span class="cm-operator">=</span><span class="cm-number">0</span>;
 <span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span><span class="cm-operator">=</span><span class="cm-number">5</span>; <span class="cm-variable">i</span><span class="cm-operator">&lt;</span> <span class="cm-number">20</span>; <span class="cm-variable">i</span><span class="cm-operator">=</span><span class="cm-variable">i</span><span class="cm-operator">+</span><span class="cm-number">1</span>){
     <span class="cm-variable">result</span> <span class="cm-operator">=</span> <span class="cm-variable">i</span> <span class="cm-operator">+</span> <span class="cm-variable">result</span>;
 }
@@ -135,27 +125,23 @@
     <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">i</span>)
 }</pre>
 
-    <h2><a class="h_ident" id="h_z/fQq5GufK" href="#h_z/fQq5GufK" tabindex="-1" role="presentation"></a>Matrices</h2>
+<h2><a class="h_ident" id="h_z/fQq5GufK" href="#h_z/fQq5GufK" tabindex="-1" role="presentation"></a>Matrices</h2>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_UAoCiao+Wl" href="#c_UAoCiao+Wl" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span>[<span class="cm-string">&quot;a&quot;</span>,<span class="cm-string">&quot;b&quot;</span>,<span class="cm-string">&quot;c&quot;</span>,<span class="cm-string">&quot;d&quot;</span>,<span class="cm-string">&quot;e&quot;</span>,<span class="cm-string">&quot;f&quot;</span>]
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_UAoCiao+Wl" href="#c_UAoCiao+Wl" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span>[<span class="cm-string">&quot;a&quot;</span>,<span class="cm-string">&quot;b&quot;</span>,<span class="cm-string">&quot;c&quot;</span>,<span class="cm-string">&quot;d&quot;</span>,<span class="cm-string">&quot;e&quot;</span>,<span class="cm-string">&quot;f&quot;</span>]
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>[<span class="cm-number">1</span>])</pre>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_Gri7nSnh+H" href="#c_Gri7nSnh+H" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span>[<span class="cm-string">&quot;a&quot;</span>,<span class="cm-string">&quot;b&quot;</span>,<span class="cm-string">&quot;c&quot;</span>,<span class="cm-string">&quot;d&quot;</span>,<span class="cm-string">&quot;e&quot;</span>,<span class="cm-string">&quot;f&quot;</span>]
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Gri7nSnh+H" href="#c_Gri7nSnh+H" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span>[<span class="cm-string">&quot;a&quot;</span>,<span class="cm-string">&quot;b&quot;</span>,<span class="cm-string">&quot;c&quot;</span>,<span class="cm-string">&quot;d&quot;</span>,<span class="cm-string">&quot;e&quot;</span>,<span class="cm-string">&quot;f&quot;</span>]
 <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>.<span class="cm-property">length</span>)</pre>
 
-    <h3><a class="i_ident" id="i_UBgnDxKyfw" href="#i_UBgnDxKyfw" tabindex="-1" role="presentation"></a>Market Example
-    </h3>
+<h3><a class="i_ident" id="i_UBgnDxKyfw" href="#i_UBgnDxKyfw" tabindex="-1" role="presentation"></a>Market Example</h3>
 
-    <p><a class="p_ident" id="p_DwPjiOGA5v" href="#p_DwPjiOGA5v" tabindex="-1" role="presentation"></a>Choclate
-        algorithm</p>
+<p><a class="p_ident" id="p_DwPjiOGA5v" href="#p_DwPjiOGA5v" tabindex="-1" role="presentation"></a>Choclate algorithm</p>
 
-    <pre class="snippet cm-s-default" data-language="java"><a class="c_ident" id="c_jB9kyLiDEt" href="#c_jB9kyLiDEt" tabindex="-1" role="presentation"></a>Go to Market,
+<pre class="snippet cm-s-default" data-language="java" ><a class="c_ident" id="c_jB9kyLiDEt" href="#c_jB9kyLiDEt" tabindex="-1" role="presentation"></a>Go to Market,
 Search for Choclate
 Get the choclate</pre>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_uEEnBAg2qR" href="#c_uEEnBAg2qR" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">req</span><span class="cm-operator">=</span><span class="cm-string">&quot;Choclate&quot;</span>
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_uEEnBAg2qR" href="#c_uEEnBAg2qR" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">req</span><span class="cm-operator">=</span><span class="cm-string">&quot;Choclate&quot;</span>
 <span class="cm-keyword">let</span> <span class="cm-def">avai</span><span class="cm-operator">=</span>[
 <span class="cm-string">&quot;Rice&quot;</span>,
 <span class="cm-string">&quot;Meat&quot;</span>,
@@ -172,26 +158,23 @@ Get the choclate</pre>
 }
 }</pre>
 
-    <h2><a class="h_ident" id="h_QC8lJ2zEW0" href="#h_QC8lJ2zEW0" tabindex="-1" role="presentation"></a>Ready to use
-        Libraries</h2>
+<h2><a class="h_ident" id="h_QC8lJ2zEW0" href="#h_QC8lJ2zEW0" tabindex="-1" role="presentation"></a>Ready to use Libraries</h2>
 
-    <p><a class="p_ident" id="p_Pt8N9JlC2m" href="#p_Pt8N9JlC2m" tabindex="-1" role="presentation"></a>Math</p>
+<p><a class="p_ident" id="p_Pt8N9JlC2m" href="#p_Pt8N9JlC2m" tabindex="-1" role="presentation"></a>Math</p>
 
-    <pre class="snippet cm-s-default" data-language="javascript"><a class="c_ident" id="c_PZlItWIrql" href="#c_PZlItWIrql" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_PZlItWIrql" href="#c_PZlItWIrql" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(
 <span class="cm-variable">Math</span>.<span class="cm-property">cos</span>(<span class="cm-variable">Math</span>.<span class="cm-property">PI</span>),
 <span class="cm-variable">Math</span>.<span class="cm-property">sin</span>(<span class="cm-variable">Math</span>.<span class="cm-property">PI</span>),
 <span class="cm-variable">Math</span>.<span class="cm-property">PI</span>
 )</pre>
 
-    <h2><a class="h_ident" id="h_IIY8g9ObWP" href="#h_IIY8g9ObWP" tabindex="-1" role="presentation"></a>Exercise</h2>
+<h2><a class="h_ident" id="h_IIY8g9ObWP" href="#h_IIY8g9ObWP" tabindex="-1" role="presentation"></a>Exercise</h2>
 
-    <h3><a class="i_ident" id="i_faQAOaB2T+" href="#i_faQAOaB2T+" tabindex="-1" role="presentation"></a>Drawing triange
-    </h3>
+<h3><a class="i_ident" id="i_hGvn4VFgrb" href="#i_hGvn4VFgrb" tabindex="-1" role="presentation"></a>Drawing triangle</h3>
 
-    <p><a class="p_ident" id="p_pP646YLlGy" href="#p_pP646YLlGy" tabindex="-1" role="presentation"></a>Write a loop that
-        calls <code>console.log</code> seven times to draw the following triangle:</p>
+<p><a class="p_ident" id="p_pP646YLlGy" href="#p_pP646YLlGy" tabindex="-1" role="presentation"></a>Write a loop that calls <code>console.log</code> seven times to draw the following triangle:</p>
 
-    <pre class="snippet cm-s-default" data-language="null"><a class="c_ident" id="c_iAdOqXrnTq" href="#c_iAdOqXrnTq" tabindex="-1" role="presentation"></a>#
+<pre class="snippet cm-s-default" data-language="null" ><a class="c_ident" id="c_iAdOqXrnTq" href="#c_iAdOqXrnTq" tabindex="-1" role="presentation"></a>#
 ##
 ###
 ####
@@ -199,29 +182,19 @@ Get the choclate</pre>
 ######
 #######</pre>
 
-    <pre class="snippet cm-s-default"
-        data-language="javascript"><a class="c_ident" id="c_KUhLwoPM6H" href="#c_KUhLwoPM6H" tabindex="-1" role="presentation"></a><span class="cm-comment">// Write your program here.</span></pre>
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_KUhLwoPM6H" href="#c_KUhLwoPM6H" tabindex="-1" role="presentation"></a><span class="cm-comment">// Write your program here.</span></pre>
 
-    <div class="solution">
-        <div class="solution-text">
+<div class="solution"><div class="solution-text">
 
-            <p><a class="p_ident" id="p_QyhO7Vf+QJ" href="#p_QyhO7Vf+QJ" tabindex="-1" role="presentation"></a>You can
-                start by printing the numbers from 1 to 7 after that you can modify the program. You can do this by
-                following the loops example in the file.</p>
+<p><a class="p_ident" id="p_QyhO7Vf+QJ" href="#p_QyhO7Vf+QJ" tabindex="-1" role="presentation"></a>You can start by printing the numbers from 1 to 7 after that you can modify the program. You can do this by following the loops example in the file.</p>
 
-            <p><a class="p_ident" id="p_Su6kXvRc1h" href="#p_Su6kXvRc1h" tabindex="-1" role="presentation"></a>You can
-                think about the relation between each square and the numbers that we have and add it to the result. To
-                Add square to the base variable you can use this style: (<code>+= &quot;#&quot;</code>)</p>
+<p><a class="p_ident" id="p_Su6kXvRc1h" href="#p_Su6kXvRc1h" tabindex="-1" role="presentation"></a>You can think about the relation between each square and the numbers that we have and add it to the result. To Add square to the base variable you can use this style: (<code>+= &quot;#&quot;</code>)</p>
 
-            <p><a class="p_ident" id="p_L/ft0IHmaA" href="#p_L/ft0IHmaA" tabindex="-1" role="presentation"></a>You can
-                check data types in the page as well to find extra information!</p>
+<p><a class="p_ident" id="p_L/ft0IHmaA" href="#p_L/ft0IHmaA" tabindex="-1" role="presentation"></a>You can check data types in the page as well to find extra information!</p>
 
-        </div>
-    </div>
+</div></div>
 
-    <h2><a class="h_ident" id="h_h99g3jN/tY" href="#h_h99g3jN/tY" tabindex="-1" role="presentation"></a>Resources</h2>
+<h2><a class="h_ident" id="h_h99g3jN/tY" href="#h_h99g3jN/tY" tabindex="-1" role="presentation"></a>Resources</h2>
 
-    <p><a class="p_ident" id="p_LwOmJ3Iny4" href="#p_LwOmJ3Iny4" tabindex="-1" role="presentation"></a><a
-            href="https://developer.mozilla.org/en-US/">MDN</a></p>
-    <nav><a href="index.html" title="cover">◆</a></nav>
+<p><a class="p_ident" id="p_LwOmJ3Iny4" href="#p_LwOmJ3Iny4" tabindex="-1" role="presentation"></a><a href="https://developer.mozilla.org/en-US/">MDN</a></p><nav><a href="index.html" title="cover">◆</a> <a href="01_Js_CrashCourse.html" title="next chapter">▶</a></nav>
 </article>
