@@ -1,0 +1,824 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javascript Crash Course :: Eloquent JavaScript</title>
+  <link rel=stylesheet href="js/node_modules/codemirror/lib/codemirror.css">
+  <script src="js/acorn_codemirror.js"></script>
+  <link rel=stylesheet href="css/ejs.css">
+  <script src="js/sandbox.js"></script>
+  <script src="js/ejs.js"></script><script>var chapNum = 1;</script></head>
+
+<article>
+<nav><a href="00_workshop.html" title="previous chapter">◀</a> <a href="index.html" title="cover">◆</a></nav>
+
+<h1><span class=chap_num>Chapter 1</span>Javascript Crash Course</h1>
+
+<blockquote>
+
+<p><a class="p_ident" id="p_NuPBbk2t6F" href="#p_NuPBbk2t6F" tabindex="-1" role="presentation"></a>“When a man dies, his deeds come to an end except for three things: Sadaqah Jariyah (ceaseless charity); a knowledge which is beneficial, or a virtuous descendant who prays for him (for the deceased).”</p>
+
+<footer>Prophet Muhammad</footer>
+
+</blockquote>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_JbmQmMBsOf" href="#p_JbmQmMBsOf" tabindex="-1" role="presentation"></a><a href="#javascript-crash-course">Javascript Crash Course</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_iVXmlv+1Wr" href="#p_iVXmlv+1Wr" tabindex="-1" role="presentation"></a><a href="#printing-on-screen">Printing On Screen</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_rAGNsfewCX" href="#p_rAGNsfewCX" tabindex="-1" role="presentation"></a><a href="#variables">Variables</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_inansG+xYz" href="#p_inansG+xYz" tabindex="-1" role="presentation"></a><a href="#variables-types">Variables Types</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_0i1agfbNZ1" href="#p_0i1agfbNZ1" tabindex="-1" role="presentation"></a><a href="#mathematics-symbols">Mathematics Symbols</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_qgmCRcHsaz" href="#p_qgmCRcHsaz" tabindex="-1" role="presentation"></a><a href="#assignment-operators">Assignment operators</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_PJ3g04N8NK" href="#p_PJ3g04N8NK" tabindex="-1" role="presentation"></a><a href="#increment--decrement">Increment &amp; decrement</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_wYhCh3+Evp" href="#p_wYhCh3+Evp" tabindex="-1" role="presentation"></a><a href="#data-types">Data Types</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_cUB4uAqiQa" href="#p_cUB4uAqiQa" tabindex="-1" role="presentation"></a><a href="#stringstexts">Strings/Texts</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_VQbrYWGgc1" href="#p_VQbrYWGgc1" tabindex="-1" role="presentation"></a><a href="#conditions">Conditions</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_shUSpvJ9UF" href="#p_shUSpvJ9UF" tabindex="-1" role="presentation"></a><a href="#comparing-statements">Comparing statements</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_0PhUq4rrdk" href="#p_0PhUq4rrdk" tabindex="-1" role="presentation"></a><a href="#comparing-shortcut">Comparing shortcut</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_Ei8XAPlSKQ" href="#p_Ei8XAPlSKQ" tabindex="-1" role="presentation"></a><a href="#logical">Logical</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_ZmOffUVd1x" href="#p_ZmOffUVd1x" tabindex="-1" role="presentation"></a><a href="#binary">Binary</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_PkTJIEJ+hF" href="#p_PkTJIEJ+hF" tabindex="-1" role="presentation"></a><a href="#switch">Switch</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_AnIPnTi/Tz" href="#p_AnIPnTi/Tz" tabindex="-1" role="presentation"></a><a href="#loops">Loops</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_jtb7+UhEpH" href="#p_jtb7+UhEpH" tabindex="-1" role="presentation"></a><a href="#data-structures">Data Structures</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_uQzJv9I1Z6" href="#p_uQzJv9I1Z6" tabindex="-1" role="presentation"></a><a href="#arrays">Arrays</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_ZkZDCN57lJ" href="#p_ZkZDCN57lJ" tabindex="-1" role="presentation"></a><a href="#for-each-element">For each element</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_EYmzB/loMX" href="#p_EYmzB/loMX" tabindex="-1" role="presentation"></a><a href="#for-of">For Of</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_ikURCo7DyI" href="#p_ikURCo7DyI" tabindex="-1" role="presentation"></a><a href="#for-in">For in</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_gAcc11EHzV" href="#p_gAcc11EHzV" tabindex="-1" role="presentation"></a><a href="#maps">Maps</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_KrJi9E38nh" href="#p_KrJi9E38nh" tabindex="-1" role="presentation"></a><a href="#sets">Sets</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_50XcAHL0nb" href="#p_50XcAHL0nb" tabindex="-1" role="presentation"></a><a href="#other-assignment">Other Assignment</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_K5Yd6h3Axg" href="#p_K5Yd6h3Axg" tabindex="-1" role="presentation"></a><a href="#functions">Functions</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_NA368qYDnU" href="#p_NA368qYDnU" tabindex="-1" role="presentation"></a><a href="#built-in-libraries">Built-in libraries</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_Pt8N9JlC2m" href="#p_Pt8N9JlC2m" tabindex="-1" role="presentation"></a><a href="#math">Math</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_65pLwcDBU+" href="#p_65pLwcDBU+" tabindex="-1" role="presentation"></a><a href="#date">Date</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_b/2iuSC8+O" href="#p_b/2iuSC8+O" tabindex="-1" role="presentation"></a><a href="#built-in-functions">built-in functions</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_UBgnDxKyfw" href="#p_UBgnDxKyfw" tabindex="-1" role="presentation"></a><a href="#market-example">Market Example</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_PhWseIKqja" href="#p_PhWseIKqja" tabindex="-1" role="presentation"></a><a href="#practice">Practice</a></p>
+
+<ul>
+
+<li>
+
+<p><a class="p_ident" id="p_FnQBEUhmOr" href="#p_FnQBEUhmOr" tabindex="-1" role="presentation"></a><a href="#prime-number">Prime Number</a></p></li></ul></li>
+
+<li>
+
+<p><a class="p_ident" id="p_7RhGr+474h" href="#p_7RhGr+474h" tabindex="-1" role="presentation"></a><a href="#classes">Classes</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_FHIY+gJdMu" href="#p_FHIY+gJdMu" tabindex="-1" role="presentation"></a><a href="#error-types-and-reviewing-debugging">Error types and reviewing (debugging)</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_BOlGLA/wK7" href="#p_BOlGLA/wK7" tabindex="-1" role="presentation"></a><a href="#modules">Modules</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_o+cFzGGhnz" href="#p_o+cFzGGhnz" tabindex="-1" role="presentation"></a><a href="#generators">Generators</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_sdRy5CTAP/" href="#p_sdRy5CTAP/" tabindex="-1" role="presentation"></a><a href="#promises">Promises</a></p></li>
+
+<li>
+
+<p><a class="p_ident" id="p_O3eC/wXinG" href="#p_O3eC/wXinG" tabindex="-1" role="presentation"></a><a href="#extras">Extras</a></p></li></ul></li></ul>
+
+<h2><a class="h_ident" id="h_iVXmlv+1Wr" href="#h_iVXmlv+1Wr" tabindex="-1" role="presentation"></a>Printing On Screen</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Z7LJbUqj/K" href="#c_Z7LJbUqj/K" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">34</span>);</pre>
+
+<h2><a class="h_ident" id="h_rAGNsfewCX" href="#h_rAGNsfewCX" tabindex="-1" role="presentation"></a>Variables</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_VMPDubC/vw" href="#c_VMPDubC/vw" tabindex="-1" role="presentation"></a><span class="cm-variable">x</span> <span class="cm-operator">+</span> <span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-number">5</span> 
+<span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> 
+<span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-operator">?</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_/YLtYepAZY" href="#c_/YLtYepAZY" tabindex="-1" role="presentation"></a><span class="cm-variable">x</span> <span class="cm-operator">+</span> <span class="cm-variable">y</span> <span class="cm-operator">+</span> <span class="cm-variable">z</span> <span class="cm-operator">=</span> <span class="cm-number">25</span>
+<span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">10</span> 
+<span class="cm-variable">z</span> <span class="cm-operator">=</span>  <span class="cm-variable">y</span> <span class="cm-operator">+</span> <span class="cm-variable">y</span></pre>
+
+<h3><a class="i_ident" id="i_inansG+xYz" href="#i_inansG+xYz" tabindex="-1" role="presentation"></a>Variables Types</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_n6ga3GuGhT" href="#c_n6ga3GuGhT" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> 
+<span class="cm-keyword">var</span>
+<span class="cm-keyword">const</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_HMFvffxUVx" href="#c_HMFvffxUVx" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">10</span>; 
+<span class="cm-keyword">const</span> <span class="cm-def">y</span> <span class="cm-operator">=</span> <span class="cm-number">14</span>;
+<span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-number">11</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Rh2EOg0MlK" href="#c_Rh2EOg0MlK" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span>);
+<span class="cm-keyword">let</span> <span class="cm-def">z</span><span class="cm-operator">=</span> <span class="cm-number">5</span>;
+<span class="cm-keyword">let</span> <span class="cm-def">h</span><span class="cm-operator">=</span> <span class="cm-number">20</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">h</span><span class="cm-operator">/</span><span class="cm-variable">z</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_q7YMSENV5Y" href="#c_q7YMSENV5Y" tabindex="-1" role="presentation"></a><span class="cm-keyword">var</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">10</span> 
+<span class="cm-keyword">var</span> <span class="cm-def">y</span> <span class="cm-operator">=</span> <span class="cm-number">20</span> 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">*</span><span class="cm-variable">y</span>)</pre>
+
+<h2><a class="h_ident" id="h_0i1agfbNZ1" href="#h_0i1agfbNZ1" tabindex="-1" role="presentation"></a>Mathematics Symbols</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_hSUJwpRCa7" href="#c_hSUJwpRCa7" tabindex="-1" role="presentation"></a><span class="cm-operator">+</span>
+<span class="cm-operator">-</span>
+<span class="cm-string-2">/</span>
+<span class="cm-operator">*</span>
+<span class="cm-operator">%</span>
+<span class="cm-operator">**</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_jFatRrt4dP" href="#c_jFatRrt4dP" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">1</span><span class="cm-operator">+</span><span class="cm-number">2</span>)
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">4</span><span class="cm-operator">*</span><span class="cm-number">5</span>)</pre>
+
+<h2><a class="h_ident" id="h_qgmCRcHsaz" href="#h_qgmCRcHsaz" tabindex="-1" role="presentation"></a>Assignment operators</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_qmBsVdyJmt" href="#c_qmBsVdyJmt" tabindex="-1" role="presentation"></a><span class="cm-operator">=</span>
+<span class="cm-operator">*=</span>
+<span class="cm-string-2">/=</span>
+<span class="cm-operator">%=</span>
+<span class="cm-operator">+=</span>
+<span class="cm-operator">-=</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_InadSl/znY" href="#c_InadSl/znY" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span><span class="cm-number">1</span>
+<span class="cm-variable">x</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>) 
+<span class="cm-variable">x</span> <span class="cm-operator">*=</span> <span class="cm-number">4</span></pre>
+
+<p>Logical</p>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_kImMm2ymeM" href="#c_kImMm2ymeM" tabindex="-1" role="presentation"></a><span class="cm-operator">&lt;&lt;</span><span class="cm-operator">=</span>
+<span class="cm-operator">&gt;&gt;</span><span class="cm-operator">=</span>
+<span class="cm-operator">&amp;=</span> <span class="cm-variable">And</span>
+<span class="cm-operator">^=</span> <span class="cm-variable">Exor</span> 
+<span class="cm-operator">|=</span> <span class="cm-variable">Or</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_pL3zSV975M" href="#c_pL3zSV975M" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)
+<span class="cm-variable">x</span> <span class="cm-operator">&amp;=</span> <span class="cm-number">0</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)</pre>
+
+<h2><a class="h_ident" id="h_mmd204dJ/7" href="#h_mmd204dJ/7" tabindex="-1" role="presentation"></a>Increment &amp; decrement</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_85Yc7Tk4mQ" href="#c_85Yc7Tk4mQ" tabindex="-1" role="presentation"></a><span class="cm-variable">A</span><span class="cm-operator">++</span>
+<span class="cm-variable">A</span><span class="cm-operator">--</span>
+<span class="cm-operator">++</span><span class="cm-variable">A</span>
+<span class="cm-operator">--</span><span class="cm-variable">A</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_NyzerXIahx" href="#c_NyzerXIahx" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">++</span>)
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-operator">++</span><span class="cm-variable">x</span>)</pre>
+
+<h2><a class="h_ident" id="h_wYhCh3+Evp" href="#h_wYhCh3+Evp" tabindex="-1" role="presentation"></a>Data Types</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_sraiEN6UTb" href="#c_sraiEN6UTb" tabindex="-1" role="presentation"></a><span class="cm-atom">undefined</span> 
+<span class="cm-variable">Boolean</span> <span class="cm-comment">// True, False  </span>
+<span class="cm-variable">String</span>   
+<span class="cm-variable">Object</span>
+<span class="cm-variable">Function</span>
+<span class="cm-variable">Null</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_QzoURUkmxu" href="#c_QzoURUkmxu" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">h</span> <span class="cm-operator">=</span> <span class="cm-atom">undefined</span>
+<span class="cm-keyword">let</span> <span class="cm-def">t</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span> 
+<span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-string">&quot;Hello&quot;</span>
+<span class="cm-keyword">let</span> <span class="cm-def">n</span> <span class="cm-operator">=</span> <span class="cm-variable">Null</span>
+<span class="cm-keyword">let</span> <span class="cm-def">b</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">x</span>) {<span class="cm-keyword">return</span> <span class="cm-variable-2">x</span><span class="cm-operator">*</span><span class="cm-number">2</span>}
+<span class="cm-keyword">let</span> <span class="cm-def">ob</span> <span class="cm-operator">=</span> {<span class="cm-property">h</span>:<span class="cm-number">1</span>,<span class="cm-property">b</span>:<span class="cm-number">2</span>}</pre>
+
+<p><a class="p_ident" id="p_KgEPdOdU8C" href="#p_KgEPdOdU8C" tabindex="-1" role="presentation"></a>Changing between types The advantages of each type</p>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_BCwkkVVCo5" href="#c_BCwkkVVCo5" tabindex="-1" role="presentation"></a><span class="cm-variable">Number</span> <span class="cm-comment">// -(2^53 − 1) and 2^53 − 1).</span>
+<span class="cm-operator">+</span><span class="cm-atom">Infinity</span>, <span class="cm-operator">-</span><span class="cm-atom">Infinity</span>, <span class="cm-variable">and</span> <span class="cm-atom">NaN</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_EeOdTmT36Y" href="#c_EeOdTmT36Y" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">2</span> 
+<span class="cm-keyword">let</span> <span class="cm-def">b</span> <span class="cm-operator">=</span> <span class="cm-number">0</span><span class="cm-operator">/</span><span class="cm-number">0</span>
+<span class="cm-keyword">let</span> <span class="cm-def">mi</span><span class="cm-operator">=</span> <span class="cm-operator">-</span><span class="cm-number">100</span><span class="cm-operator">/</span><span class="cm-number">0</span>
+<span class="cm-keyword">let</span> <span class="cm-def">pl</span><span class="cm-operator">=</span> <span class="cm-number">100</span><span class="cm-operator">/</span><span class="cm-number">0</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_dTcSWjr0vu" href="#c_dTcSWjr0vu" tabindex="-1" role="presentation"></a><span class="cm-variable">BigInt</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_NE7MMvDsB6" href="#c_NE7MMvDsB6" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">Number</span>.<span class="cm-property">MAX_VALUE</span>)
+<span class="cm-comment">// console.log(BigInt(Number.MAX_VALUE))</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Vk8OueU8vd" href="#c_Vk8OueU8vd" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-number">42</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">typeof</span> <span class="cm-variable">x</span>)    
+<span class="cm-variable">x</span>   <span class="cm-operator">=</span> <span class="cm-string">'bar'</span>; 
+<span class="cm-variable">x</span>   <span class="cm-operator">=</span> <span class="cm-atom">true</span>;</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_6AHWYtcnAe" href="#c_6AHWYtcnAe" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-string">&quot;Hello&quot;</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">result</span>)
+<span class="cm-keyword">let</span> <span class="cm-def">y</span><span class="cm-operator">=</span> <span class="cm-string">&quot;world&quot;</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span>)
+<span class="cm-keyword">let</span> <span class="cm-def">z</span><span class="cm-operator">=</span> <span class="cm-number">1</span>;
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span><span class="cm-operator">+</span><span class="cm-variable">y</span><span class="cm-operator">+</span><span class="cm-variable">z</span>)</pre>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Data Types</a></p>
+
+<h3><a class="i_ident" id="i_9jKUzw3rPm" href="#i_9jKUzw3rPm" tabindex="-1" role="presentation"></a>Strings/Texts</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_CJET4oeIAx" href="#c_CJET4oeIAx" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">string1</span> <span class="cm-operator">=</span> <span class="cm-string">&quot;A string&quot;</span>;
+<span class="cm-keyword">const</span> <span class="cm-def">string2</span> <span class="cm-operator">=</span> <span class="cm-string">'Also a string'</span>;
+<span class="cm-keyword">const</span> <span class="cm-def">string3</span> <span class="cm-operator">=</span> <span class="cm-string-2">`another string`</span>;</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_hTRMIbppMV" href="#c_hTRMIbppMV" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">string1</span> <span class="cm-operator">=</span> <span class="cm-string-2">`${</span><span class="cm-number">1</span><span class="cm-operator">+</span><span class="cm-number">2</span><span class="cm-string-2">}</span> <span class="cm-string-2">= 3 , 1+1 = 2`</span>;</pre>
+
+<h2><a class="h_ident" id="h_VQbrYWGgc1" href="#h_VQbrYWGgc1" tabindex="-1" role="presentation"></a>Conditions</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_7bLAG/cLPQ" href="#c_7bLAG/cLPQ" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>
+<span class="cm-variable">ifelse</span> 
+<span class="cm-keyword">switch</span></pre>
+
+<h3><a class="i_ident" id="i_shUSpvJ9UF" href="#i_shUSpvJ9UF" tabindex="-1" role="presentation"></a>Comparing statements</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_NYFvqDLIMa" href="#c_NYFvqDLIMa" tabindex="-1" role="presentation"></a><span class="cm-operator">&lt;</span> 
+<span class="cm-operator">&lt;=</span> 
+<span class="cm-operator">&gt;</span>
+<span class="cm-operator">&gt;=</span>
+<span class="cm-operator">==</span>
+<span class="cm-operator">!=</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_gUP9ehh48i" href="#c_gUP9ehh48i" tabindex="-1" role="presentation"></a><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-number">1</span> <span class="cm-operator">&lt;</span> <span class="cm-number">3</span> )</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_NEudtREHQ3" href="#c_NEudtREHQ3" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> <span class="cm-number">2</span>, <span class="cm-def">y</span><span class="cm-operator">=</span> <span class="cm-number">4</span>;
+<span class="cm-keyword">if</span>(<span class="cm-variable">x</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">y</span> ){
+
+}
+
+<span class="cm-keyword">if</span> (<span class="cm-variable">x</span> <span class="cm-operator">&gt;</span> <span class="cm-variable">y</span> ){
+
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_ign0gxlGl1" href="#c_ign0gxlGl1" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
+<span class="cm-keyword">else</span>{}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_pbJd5cQ2Hy" href="#c_pbJd5cQ2Hy" tabindex="-1" role="presentation"></a><span class="cm-keyword">if</span>(){}
+<span class="cm-keyword">else</span> <span class="cm-keyword">if</span>(){}
+<span class="cm-keyword">else</span>()</pre>
+
+<h3><a class="i_ident" id="i_0PhUq4rrdk" href="#i_0PhUq4rrdk" tabindex="-1" role="presentation"></a>Comparing shortcut</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_EkmiBB5fSE" href="#c_EkmiBB5fSE" tabindex="-1" role="presentation"></a>(<span class="cm-variable">condition</span>)<span class="cm-operator">?</span><span class="cm-variable">ifTrue</span>:<span class="cm-variable">ifFalse</span>;</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_+x/dYG5ITL" href="#c_+x/dYG5ITL" tabindex="-1" role="presentation"></a><span class="cm-variable">a</span> <span class="cm-operator">=</span> (<span class="cm-number">4</span> <span class="cm-operator">&gt;</span> <span class="cm-number">5</span> )<span class="cm-operator">?</span> <span class="cm-atom">true</span>: <span class="cm-atom">false</span>; 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">a</span>)</pre>
+
+<h3><a class="i_ident" id="i_Ei8XAPlSKQ" href="#i_Ei8XAPlSKQ" tabindex="-1" role="presentation"></a>Logical</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_zMaycAOk/W" href="#c_zMaycAOk/W" tabindex="-1" role="presentation"></a><span class="cm-operator">&amp;</span><span class="cm-operator">&amp;</span>
+<span class="cm-operator">|</span><span class="cm-operator">|</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_t1RNAIxnxg" href="#c_t1RNAIxnxg" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span> (<span class="cm-atom">false</span><span class="cm-operator">&amp;</span><span class="cm-operator">&amp;</span><span class="cm-atom">true</span><span class="cm-operator">&amp;</span><span class="cm-operator">&amp;</span><span class="cm-atom">false</span>)
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_vRSf508oc3" href="#c_vRSf508oc3" tabindex="-1" role="presentation"></a><span class="cm-atom">true</span>,<span class="cm-atom">true</span>
+<span class="cm-atom">false</span>,<span class="cm-atom">false</span>
+<span class="cm-atom">true</span>,<span class="cm-atom">false</span></pre>
+
+<h3><a class="i_ident" id="i_ZmOffUVd1x" href="#i_ZmOffUVd1x" tabindex="-1" role="presentation"></a>Binary</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_aLAvQOJd8E" href="#c_aLAvQOJd8E" tabindex="-1" role="presentation"></a><span class="cm-operator">&amp;</span>
+<span class="cm-operator">|</span>
+<span class="cm-operator">^</span></pre>
+
+<p><a class="p_ident" id="p_6A63Dx7gZQ" href="#p_6A63Dx7gZQ" tabindex="-1" role="presentation"></a>Binary Numbers</p>
+
+<h3><a class="i_ident" id="i_PkTJIEJ+hF" href="#i_PkTJIEJ+hF" tabindex="-1" role="presentation"></a>Switch</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_nez91YngiQ" href="#c_nez91YngiQ" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">name</span> <span class="cm-operator">=</span> <span class="cm-string">&quot;Ahmad&quot;</span>
+<span class="cm-keyword">switch</span>(){
+    <span class="cm-keyword">case</span> <span class="cm-string">&quot;Ahmad&quot;</span>:
+          <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">&quot;Ahmad is a loyal person&quot;</span>)
+        <span class="cm-keyword">break</span>;
+    <span class="cm-keyword">case</span> <span class="cm-string">&quot;Sam&quot;</span>:
+          <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">&quot;Sam is not home.&quot;</span>)
+        <span class="cm-keyword">break</span>; 
+    <span class="cm-keyword">case</span> <span class="cm-string">&quot;Jhon&quot;</span>:
+          <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">&quot;Jhon is still outside.&quot;</span>)
+        <span class="cm-keyword">break</span>;
+    <span class="cm-keyword">default</span>:
+      <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">&quot;The name is not defined&quot;</span>)
+
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_2jmj7l5rSw" href="#c_2jmj7l5rSw" tabindex="-1" role="presentation"></a></pre>
+
+<h2><a class="h_ident" id="h_AnIPnTi/Tz" href="#h_AnIPnTi/Tz" tabindex="-1" role="presentation"></a>Loops</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_GK2FCA0MMz" href="#c_GK2FCA0MMz" tabindex="-1" role="presentation"></a><span class="cm-keyword">for</span>(){}
+<span class="cm-keyword">while</span>(){}
+<span class="cm-keyword">do</span>{}<span class="cm-keyword">while</span>()</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_o5UcDIgori" href="#c_o5UcDIgori" tabindex="-1" role="presentation"></a><span class="cm-keyword">break</span>
+<span class="cm-keyword">continue</span>
+<span class="cm-variable">Label</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_DvJIviJRKv" href="#c_DvJIviJRKv" tabindex="-1" role="presentation"></a><span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span><span class="cm-operator">=</span><span class="cm-number">0</span>; <span class="cm-variable">i</span><span class="cm-operator">&lt;</span> <span class="cm-number">10</span>; <span class="cm-variable">i</span><span class="cm-operator">++</span>){
+    <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">i</span>)
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_g1d2UDN6Vk" href="#c_g1d2UDN6Vk" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">result</span> <span class="cm-operator">=</span><span class="cm-number">0</span>;
+<span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span><span class="cm-operator">=</span><span class="cm-number">1</span>; <span class="cm-variable">i</span><span class="cm-operator">&lt;</span> <span class="cm-number">20</span>; <span class="cm-variable">i</span><span class="cm-operator">=</span><span class="cm-variable">i</span><span class="cm-operator">+</span><span class="cm-number">1</span>){
+    <span class="cm-keyword">if</span>(<span class="cm-variable">x</span><span class="cm-operator">%</span><span class="cm-number">2</span> <span class="cm-operator">==</span> <span class="cm-number">0</span> ){
+      <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">i</span>)
+    }
+}
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">result</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_+EiEM5p1CP" href="#c_+EiEM5p1CP" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span><span class="cm-operator">=</span><span class="cm-number">0</span>
+<span class="cm-keyword">let</span> <span class="cm-def">result1</span><span class="cm-operator">=</span><span class="cm-number">0</span>;
+<span class="cm-keyword">while</span>(<span class="cm-variable">x</span> <span class="cm-operator">&lt;</span> <span class="cm-number">150</span> ){
+    <span class="cm-keyword">if</span>(<span class="cm-variable">x</span><span class="cm-operator">%</span><span class="cm-number">5</span> <span class="cm-operator">==</span> <span class="cm-number">0</span>){
+      <span class="cm-variable">x</span><span class="cm-operator">++</span>
+    }
+}
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_o9Rs2LbdDh" href="#c_o9Rs2LbdDh" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">result</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+<span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span> ; <span class="cm-variable">i</span> <span class="cm-operator">&lt;</span> <span class="cm-number">100</span> ; <span class="cm-variable">i</span> <span class="cm-operator">++</span> ){
+  <span class="cm-variable">result</span> <span class="cm-operator">+=</span> <span class="cm-variable">i</span>;
+}
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">result</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_l/oCVBpCfb" href="#c_l/oCVBpCfb" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">n</span> <span class="cm-operator">=</span> <span class="cm-number">100</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>((<span class="cm-variable">n</span><span class="cm-operator">*</span>(<span class="cm-variable">n</span><span class="cm-operator">+</span><span class="cm-number">1</span>))<span class="cm-operator">/</span><span class="cm-number">2</span>)</pre>
+
+<h2><a class="h_ident" id="h_jtb7+UhEpH" href="#h_jtb7+UhEpH" tabindex="-1" role="presentation"></a>Data Structures</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_XerglUF6Zd" href="#c_XerglUF6Zd" tabindex="-1" role="presentation"></a><span class="cm-variable">Array</span>:<span class="cm-variable">Index</span>
+<span class="cm-variable">Map</span>:<span class="cm-variable">Key</span><span class="cm-operator">-</span><span class="cm-variable">Value</span> 
+<span class="cm-variable">Set</span>:<span class="cm-variable">Only</span> <span class="cm-variable">one</span>.</pre>
+
+<h2><a class="h_ident" id="h_uQzJv9I1Z6" href="#h_uQzJv9I1Z6" tabindex="-1" role="presentation"></a>Arrays</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_5OHPiNS9hO" href="#c_5OHPiNS9hO" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">ulama</span> <span class="cm-operator">=</span> [<span class="cm-string">&quot;ibn haytham&quot;</span> , <span class="cm-string">&quot;omar khayyam&quot;</span> , <span class="cm-string">&quot;al-battani&quot;</span> , <span class="cm-string">&quot;Al-harezmi&quot;</span> , <span class="cm-string">&quot;ibn-sina&quot;</span> , <span class="cm-string">&quot;ibn-nafis&quot;</span>]
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">ulama</span>[<span class="cm-number">1</span>])
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">ulama</span>.<span class="cm-property">length</span>)</pre>
+
+<h3><a class="i_ident" id="i_ZkZDCN57lJ" href="#i_ZkZDCN57lJ" tabindex="-1" role="presentation"></a>For each element</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_iT556WmZ+2" href="#c_iT556WmZ+2" tabindex="-1" role="presentation"></a><span class="cm-variable">ForEach</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_MJIUUY4hGj" href="#c_MJIUUY4hGj" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">ulama</span> <span class="cm-operator">=</span> [<span class="cm-string">&quot;ibn haytham&quot;</span> , <span class="cm-string">&quot;omar khayyam&quot;</span> , <span class="cm-string">&quot;al-battani&quot;</span> , <span class="cm-string">&quot;Al-harezmi&quot;</span> , <span class="cm-string">&quot;ibn-sina&quot;</span> , <span class="cm-string">&quot;ibn-nafis&quot;</span>]
+<span class="cm-variable">ulama</span>.<span class="cm-property">forEach</span>(<span class="cm-def">element</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">element</span>));</pre>
+
+<h3><a class="i_ident" id="i_EYmzB/loMX" href="#i_EYmzB/loMX" tabindex="-1" role="presentation"></a>For Of</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_1oox9VE0fa" href="#c_1oox9VE0fa" tabindex="-1" role="presentation"></a><span class="cm-keyword">for</span>..<span class="cm-variable">of</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_BD50+lTcLR" href="#c_BD50+lTcLR" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">Books</span> <span class="cm-operator">=</span> [<span class="cm-string">'Book of Optics'</span>, <span class="cm-string">'Rubaiyat'</span>, <span class="cm-string-2">`Kitab Al-Zij al-Sabi’`</span>, <span class="cm-string">&quot;Algebra&quot;</span>, <span class="cm-string-2">`The Canon of Medicine`</span> , <span class="cm-string-2">`Al-Shamil fi al-Tibb`</span>];
+<span class="cm-keyword">for</span> (<span class="cm-keyword">const</span> <span class="cm-def">element</span> <span class="cm-keyword">of</span> <span class="cm-variable">Books</span>) {
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">element</span>);
+}</pre>
+
+<h3><a class="i_ident" id="i_ikURCo7DyI" href="#i_ikURCo7DyI" tabindex="-1" role="presentation"></a>For in</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Jhalr7LDjC" href="#c_Jhalr7LDjC" tabindex="-1" role="presentation"></a><span class="cm-keyword">for</span>..<span class="cm-variable">in</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_+Vn6Oh4GaL" href="#c_+Vn6Oh4GaL" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">scholarAndArea</span> <span class="cm-operator">=</span> { <span class="cm-string-2">`ibn haytham`</span>: <span class="cm-string-2">`Optics`</span>, <span class="cm-string-2">`al-kharezmi`</span>: <span class="cm-string-2">`Algebra`</span>, <span class="cm-string-2">`ibn-sina`</span>: <span class="cm-string-2">`Medics`</span> };
+
+<span class="cm-keyword">for</span> (<span class="cm-keyword">const</span> <span class="cm-def">property</span> <span class="cm-keyword">in</span> <span class="cm-variable">scholarAndArea</span>) {
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string-2">`${</span><span class="cm-variable">property</span><span class="cm-string-2">}</span><span class="cm-string-2">: ${</span><span class="cm-variable">scholarAndAreat</span>[<span class="cm-variable">property</span>]<span class="cm-string-2">}</span><span class="cm-string-2">`</span>);
+}</pre>
+
+<h2><a class="h_ident" id="h_gAcc11EHzV" href="#h_gAcc11EHzV" tabindex="-1" role="presentation"></a>Maps</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_0+RkpDsnpr" href="#c_0+RkpDsnpr" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Map</span>()</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_WyzLXxwaTa" href="#c_WyzLXxwaTa" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Map</span>()
+<span class="cm-variable">cities</span>.<span class="cm-property">set</span>(<span class="cm-string">'Sudan'</span>, <span class="cm-string">&quot;Khartom&quot;</span>)
+<span class="cm-variable">cities</span>.<span class="cm-property">has</span>(<span class="cm-string">'Sudan'</span>) <span class="cm-comment">// true</span>
+<span class="cm-variable">cities</span>.<span class="cm-property">get</span>(<span class="cm-string">'Jordan'</span>) <span class="cm-comment">// undefined</span>
+<span class="cm-variable">cities</span>.<span class="cm-property">set</span>(<span class="cm-string">'Jordan'</span>, <span class="cm-string">&quot;Oman&quot;</span>)
+<span class="cm-variable">cities</span>.<span class="cm-property">get</span>(<span class="cm-string">'Jordan'</span>) <span class="cm-comment">// &quot;Oman&quot;</span>
+<span class="cm-variable">cities</span>.<span class="cm-property">delete</span>(<span class="cm-string">'Syria'</span>) <span class="cm-comment">// false</span>
+<span class="cm-variable">cities</span>.<span class="cm-property">delete</span>(<span class="cm-string">'Sudan'</span>) <span class="cm-comment">// true</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>.<span class="cm-property">size</span>) <span class="cm-comment">// 1</span></pre>
+
+<h2><a class="h_ident" id="h_KrJi9E38nh" href="#h_KrJi9E38nh" tabindex="-1" role="presentation"></a>Sets</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_5rSXBczXVR" href="#c_5rSXBczXVR" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">myBooks</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Set</span>()</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_+Z7uXbs41B" href="#c_+Z7uXbs41B" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">myBooks</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Set</span>()
+<span class="cm-variable">mySet</span>.<span class="cm-property">add</span>(<span class="cm-string">&quot;Sherlock&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">add</span>(<span class="cm-string">&quot;Tantawi&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">add</span>(<span class="cm-string">&quot;ibn Battuta&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">add</span>(<span class="cm-string">&quot;Ali Omari&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">add</span>(<span class="cm-string">&quot;Sherlock&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">has</span>(<span class="cm-string">&quot;Sherlock&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">delete</span>(<span class="cm-string">&quot;Sherlock&quot;</span>)
+<span class="cm-variable">mySet</span>.<span class="cm-property">size</span></pre>
+
+<h2><a class="h_ident" id="h_50XcAHL0nb" href="#h_50XcAHL0nb" tabindex="-1" role="presentation"></a>Other Assignment</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_yjHRHY1Hp3" href="#c_yjHRHY1Hp3" tabindex="-1" role="presentation"></a>[<span class="cm-variable">a</span>, <span class="cm-variable">b</span>] <span class="cm-operator">=</span> [<span class="cm-number">1</span>, <span class="cm-number">2</span>]
+{<span class="cm-variable">a</span>, <span class="cm-variable">b</span>} <span class="cm-operator">=</span> {<span class="cm-property">a</span>:<span class="cm-number">1</span>, <span class="cm-property">b</span>:<span class="cm-number">2</span>}</pre>
+
+<h2><a class="h_ident" id="h_K5Yd6h3Axg" href="#h_K5Yd6h3Axg" tabindex="-1" role="presentation"></a>Functions</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_I7aYb7hYPF" href="#c_I7aYb7hYPF" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">multiple2</span>(<span class="cm-def">x</span>){
+    <span class="cm-keyword">return</span> <span class="cm-variable-2">x</span><span class="cm-operator">*</span><span class="cm-number">2</span>
+}
+
+<span class="cm-keyword">function</span> <span class="cm-def">halfOf</span>(<span class="cm-def">x</span>){
+    <span class="cm-keyword">return</span> <span class="cm-variable-2">x</span><span class="cm-operator">/</span><span class="cm-number">2</span>
+}
+
+<span class="cm-keyword">const</span> <span class="cm-def">scholarAndArea</span> <span class="cm-operator">=</span> { <span class="cm-string-2">`ibn haytham`</span>: <span class="cm-string-2">`Optics`</span>, <span class="cm-string-2">`al-kharezmi`</span>: <span class="cm-string-2">`Algebra`</span>, <span class="cm-string-2">`ibn-sina`</span>: <span class="cm-string-2">`Medics`</span> };
+
+<span class="cm-keyword">function</span> <span class="cm-def">find</span>(<span class="cm-def">field</span>,<span class="cm-def">map</span>){
+<span class="cm-keyword">for</span> (<span class="cm-keyword">const</span> <span class="cm-def">property</span> <span class="cm-keyword">in</span> <span class="cm-variable">scholarAndArea</span>) {
+  <span class="cm-keyword">if</span>(<span class="cm-variable">scholarAndAreat</span>[<span class="cm-variable-2">property</span>] <span class="cm-operator">==</span> <span class="cm-variable-2">field</span>)
+    <span class="cm-keyword">return</span> <span class="cm-variable-2">property</span>
+}
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_acJLm0Yuhh" href="#c_acJLm0Yuhh" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">multiplier</span>(<span class="cm-def">x</span>){
+    <span class="cm-keyword">return</span> <span class="cm-keyword">function</span> (<span class="cm-def">y</span>){
+        <span class="cm-keyword">return</span> <span class="cm-variable-2">y</span> <span class="cm-operator">*</span> <span class="cm-variable-2">x</span>
+    }
+}</pre>
+
+<h2><a class="h_ident" id="h_o82vfbN/6m" href="#h_o82vfbN/6m" tabindex="-1" role="presentation"></a>Built-in libraries</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_cto56hS2w0" href="#c_cto56hS2w0" tabindex="-1" role="presentation"></a><span class="cm-variable">Math</span>
+<span class="cm-variable">Date</span></pre>
+
+<h3><a class="i_ident" id="i_Pt8N9JlC2m" href="#i_Pt8N9JlC2m" tabindex="-1" role="presentation"></a>Math</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_XNgFRfriDQ" href="#c_XNgFRfriDQ" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span> <span class="cm-def">degToRad</span>(<span class="cm-def">degrees</span>) {
+  <span class="cm-keyword">return</span> <span class="cm-variable">Number</span>.<span class="cm-property">parseInt</span>(<span class="cm-variable-2">degrees</span> <span class="cm-operator">*</span> (<span class="cm-variable">Math</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">180</span>));
+};
+
+<span class="cm-keyword">function</span> <span class="cm-def">radToDeg</span>(<span class="cm-def">rad</span>) {
+  <span class="cm-keyword">return</span> <span class="cm-variable">Number</span>.<span class="cm-property">parseInt</span>(<span class="cm-variable-2">rad</span> <span class="cm-operator">/</span> (<span class="cm-variable">Math</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">180</span>));
+};
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(
+<span class="cm-variable">Math</span>.<span class="cm-property">cos</span>(<span class="cm-variable">degToRad</span>(<span class="cm-variable">Math</span>.<span class="cm-property">PI</span>)),
+<span class="cm-variable">Math</span>.<span class="cm-property">sin</span>(<span class="cm-variable">degToRad</span>(<span class="cm-variable">Math</span>.<span class="cm-property">PI</span>)),
+<span class="cm-variable">Math</span>.<span class="cm-property">PI</span>
+)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_OO4BQbGDlH" href="#c_OO4BQbGDlH" tabindex="-1" role="presentation"></a><span class="cm-keyword">var</span> <span class="cm-def">a</span>, <span class="cm-def">x</span>, <span class="cm-def">y</span>;
+<span class="cm-keyword">var</span> <span class="cm-def">r</span> <span class="cm-operator">=</span> <span class="cm-number">10</span>;
+
+<span class="cm-keyword">with</span> (<span class="cm-variable">Math</span>) {
+  <span class="cm-variable">a</span> <span class="cm-operator">=</span> <span class="cm-variable">PI</span> <span class="cm-operator">*</span> <span class="cm-variable">r</span> <span class="cm-operator">*</span> <span class="cm-variable">r</span>;
+  <span class="cm-variable">x</span> <span class="cm-operator">=</span> <span class="cm-variable">r</span> <span class="cm-operator">*</span> <span class="cm-variable">cos</span>(<span class="cm-variable">PI</span>);
+  <span class="cm-variable">y</span> <span class="cm-operator">=</span> <span class="cm-variable">r</span> <span class="cm-operator">*</span> <span class="cm-variable">sin</span>(<span class="cm-variable">PI</span> <span class="cm-operator">/</span> <span class="cm-number">2</span>);
+}
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">a</span>,<span class="cm-variable">x</span>,<span class="cm-variable">y</span>)</pre>
+
+<h3><a class="i_ident" id="i_65pLwcDBU+" href="#i_65pLwcDBU+" tabindex="-1" role="presentation"></a>Date</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Ku+T4JZWy5" href="#c_Ku+T4JZWy5" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">h</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">h</span>)</pre>
+
+<h3><a class="i_ident" id="i_LhI1V3AUvE" href="#i_LhI1V3AUvE" tabindex="-1" role="presentation"></a>built-in functions</h3>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_x2IB9F29H6" href="#c_x2IB9F29H6" tabindex="-1" role="presentation"></a><span class="cm-variable">getDate</span>()
+<span class="cm-variable">getDay</span>()
+<span class="cm-variable">getFullYear</span>()
+<span class="cm-variable">getHours</span>()
+<span class="cm-variable">getMilliseconds</span>()
+<span class="cm-variable">getMinutes</span>()
+<span class="cm-variable">getMonth</span>()
+<span class="cm-variable">getSeconds</span>()</pre>
+
+<h3><a class="i_ident" id="i_UBgnDxKyfw" href="#i_UBgnDxKyfw" tabindex="-1" role="presentation"></a>Market Example</h3>
+
+<p><a class="p_ident" id="p_xfh7BFDgpO" href="#p_xfh7BFDgpO" tabindex="-1" role="presentation"></a>What is algorithms?</p>
+
+<p><a class="p_ident" id="p_zn8LiUvmpT" href="#p_zn8LiUvmpT" tabindex="-1" role="presentation"></a>Date checker algorithms</p>
+
+<pre class="snippet cm-s-default" data-language="java" ><a class="c_ident" id="c_QHZ7wNsT5v" href="#c_QHZ7wNsT5v" tabindex="-1" role="presentation"></a>Go to market
+pick a product 
+Check date
+Write the number of outdated products
+Do that for all products.</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_CqqEMxSFA9" href="#c_CqqEMxSFA9" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">avai</span><span class="cm-operator">=</span>[
+<span class="cm-number">2010</span>,
+<span class="cm-number">2015</span>,
+<span class="cm-number">2000</span>,
+<span class="cm-number">2021</span>,
+<span class="cm-number">2100</span>,
+<span class="cm-number">1914</span>,
+<span class="cm-number">2023</span>,
+<span class="cm-number">1453</span>
+]
+<span class="cm-keyword">let</span> <span class="cm-def">year</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>().<span class="cm-property">getFullYear</span>()
+<span class="cm-keyword">let</span> <span class="cm-def">count</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+<span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">avai</span>.<span class="cm-property">length</span> ; <span class="cm-variable">i</span><span class="cm-operator">=</span> <span class="cm-variable">i</span><span class="cm-operator">+</span><span class="cm-number">1</span>){
+<span class="cm-keyword">if</span>(<span class="cm-variable">avai</span>[<span class="cm-variable">i</span>] <span class="cm-operator">&lt;</span>  <span class="cm-variable">year</span>){
+<span class="cm-variable">count</span> <span class="cm-operator">++</span> }
+}
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">count</span>)</pre>
+
+<h2><a class="h_ident" id="h_PhWseIKqja" href="#h_PhWseIKqja" tabindex="-1" role="presentation"></a>Practice</h2>
+
+<h3><a class="i_ident" id="i_FnQBEUhmOr" href="#i_FnQBEUhmOr" tabindex="-1" role="presentation"></a>Prime Number</h3>
+
+<p><a class="p_ident" id="p_JQWjCe3SjD" href="#p_JQWjCe3SjD" tabindex="-1" role="presentation"></a>Write a function that check if the number is prime or not.</p>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_g7Fbcl6KCj" href="#c_g7Fbcl6KCj" tabindex="-1" role="presentation"></a><span class="cm-comment">// Your program here.</span></pre>
+
+<div class="solution"><div class="solution-text">
+
+<p><a class="p_ident" id="p_D9y6bakEA7" href="#p_D9y6bakEA7" tabindex="-1" role="presentation"></a>You can think about the rule of prime number which its a number that can not be divided but on itself and one. To check that we can use the Remainder symbol (%) and see if there is any remainder.</p>
+
+<p><a class="p_ident" id="p_O4c0WI9BKp" href="#p_O4c0WI9BKp" tabindex="-1" role="presentation"></a>You can use the <a href="#loops">Loops</a> to check all numbers from 2 till the needed number and check if the reminder is zero - whcih means it accept it as divider, if that is the case then the number is not prime otherwise it’s prime.</p>
+
+</div></div>
+
+<h2><a class="h_ident" id="h_7RhGr+474h" href="#h_7RhGr+474h" tabindex="-1" role="presentation"></a>Classes</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Zk/mM7BCBd" href="#c_Zk/mM7BCBd" tabindex="-1" role="presentation"></a><span class="cm-variable">Class</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_MxJTpCLDU5" href="#c_MxJTpCLDU5" tabindex="-1" role="presentation"></a><span class="cm-keyword">class</span> <span class="cm-def">Rectangle</span> {
+  <span class="cm-property">constructor</span>(<span class="cm-def">height</span>, <span class="cm-def">width</span>) {
+    <span class="cm-keyword">this</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-variable-2">height</span>;
+    <span class="cm-keyword">this</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-variable-2">width</span>;
+  }
+    <span class="cm-comment">// Getter</span>
+  <span class="cm-keyword">get</span> <span class="cm-property">area</span>() {
+    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span>.<span class="cm-property">calcArea</span>();
+  }
+  <span class="cm-comment">// Method</span>
+  <span class="cm-property">calcArea</span>() {
+    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span>.<span class="cm-property">height</span> <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">width</span>;
+  }
+}
+<span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Rectangle</span>(<span class="cm-number">10</span>,<span class="cm-number">20</span>)
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">x</span>.<span class="cm-property">area</span>())</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_y1NDWnGTjg" href="#c_y1NDWnGTjg" tabindex="-1" role="presentation"></a><span class="cm-keyword">class</span> <span class="cm-def">Rectangle</span> {
+  <span class="cm-property">constructor</span>(<span class="cm-def">height</span>, <span class="cm-def">width</span>) {
+    <span class="cm-keyword">this</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-variable-2">height</span>;
+    <span class="cm-keyword">this</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-variable-2">width</span>;
+  }
+    <span class="cm-comment">// Getter</span>
+  <span class="cm-keyword">get</span> <span class="cm-property">area</span>() {
+    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span>.<span class="cm-property">calcArea</span>();
+  }
+  <span class="cm-comment">// Method</span>
+  <span class="cm-property">calcArea</span>() {
+    <span class="cm-keyword">return</span> <span class="cm-keyword">this</span>.<span class="cm-property">height</span> <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">width</span>;
+  }
+}
+
+<span class="cm-variable">Class</span> <span class="cm-variable">Square</span> <span class="cm-keyword">extends</span> <span class="cm-variable">Rectangle</span>{
+    <span class="cm-variable">constructor</span>(<span class="cm-variable">size</span>){
+        <span class="cm-keyword">super</span>(<span class="cm-variable">size</span>,<span class="cm-variable">size</span>)
+    }
+}</pre>
+
+<h2><a class="h_ident" id="h_YNurgrijjM" href="#h_YNurgrijjM" tabindex="-1" role="presentation"></a>Error types and reviewing (debugging)</h2>
+
+<p><a class="p_ident" id="p_ECYj4uQ2sV" href="#p_ECYj4uQ2sV" tabindex="-1" role="presentation"></a>1- Logical Error</p>
+
+<p><a class="p_ident" id="p_Yv+FUp+vJQ" href="#p_Yv+FUp+vJQ" tabindex="-1" role="presentation"></a>2- Syntax Errore</p>
+
+<p><a class="p_ident" id="p_H5BZbzAAlb" href="#p_H5BZbzAAlb" tabindex="-1" role="presentation"></a>3- Runtime Errors</p>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_ZQ20GhZaYE" href="#c_ZQ20GhZaYE" tabindex="-1" role="presentation"></a><span class="cm-keyword">debugger</span>
+<span class="cm-keyword">try</span><span class="cm-meta">...</span><span class="cm-keyword">catch</span>
+<span class="cm-keyword">throw</span>
+<span class="cm-variable">Error</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_KM6zTJr4cm" href="#c_KM6zTJr4cm" tabindex="-1" role="presentation"></a><span class="cm-variable">nonExistentFunction</span>();</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_dY+PdNn227" href="#c_dY+PdNn227" tabindex="-1" role="presentation"></a><span class="cm-keyword">try</span> {
+  <span class="cm-variable">nonExistentFunction</span>();
+} <span class="cm-keyword">catch</span> (<span class="cm-def">error</span>) {
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">error</span>);
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_KyRXkomRFE" href="#c_KyRXkomRFE" tabindex="-1" role="presentation"></a><span class="cm-keyword">try</span> {
+  <span class="cm-keyword">throw</span> <span class="cm-string">&quot;The number is not wrttien yet.&quot;</span>
+} <span class="cm-keyword">catch</span> (<span class="cm-def">error</span>) {
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">error</span>);
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_H3jtqghyhB" href="#c_H3jtqghyhB" tabindex="-1" role="presentation"></a><span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Error</span>(<span class="cm-string">&quot;Learn from your mistakes&quot;</span>)</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_j2+ZRdzFur" href="#c_j2+ZRdzFur" tabindex="-1" role="presentation"></a><span class="cm-keyword">class</span> <span class="cm-def">CustomError</span> <span class="cm-keyword">extends</span> <span class="cm-variable">Error</span> {
+  <span class="cm-property">constructor</span>(<span class="cm-def">place</span>, <span class="cm-meta">...</span><span class="cm-def">params</span>) {
+    <span class="cm-keyword">super</span>(<span class="cm-meta">...</span><span class="cm-variable-2">params</span>)
+    <span class="cm-keyword">if</span> (<span class="cm-variable">Error</span>.<span class="cm-property">captureStackTrace</span>) {
+      <span class="cm-variable">Error</span>.<span class="cm-property">captureStackTrace</span>(<span class="cm-keyword">this</span>, <span class="cm-variable">CustomError</span>)
+    }
+    <span class="cm-keyword">this</span>.<span class="cm-property">name</span> <span class="cm-operator">=</span> <span class="cm-string">'CustomError'</span>
+    <span class="cm-keyword">this</span>.<span class="cm-property">place</span> <span class="cm-operator">=</span> <span class="cm-variable-2">place</span>
+    <span class="cm-keyword">this</span>.<span class="cm-property">date</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>()
+  }
+}
+
+<span class="cm-keyword">try</span> {
+  <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">CustomError</span>(<span class="cm-string">'Erorr location'</span>, <span class="cm-string">'Try again!'</span>)
+} <span class="cm-keyword">catch</span>(<span class="cm-def">e</span>) {
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">e</span>.<span class="cm-property">name</span>)    <span class="cm-comment">//CustomError</span>
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">e</span>.<span class="cm-property">place</span>)     
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">e</span>.<span class="cm-property">message</span>) 
+  <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-variable-2">e</span>.<span class="cm-property">stack</span>)   
+}</pre>
+
+<h2><a class="h_ident" id="h_BOlGLA/wK7" href="#h_BOlGLA/wK7" tabindex="-1" role="presentation"></a>Modules</h2>
+
+<p><a class="p_ident" id="p_J/JS2+10c1" href="#p_J/JS2+10c1" tabindex="-1" role="presentation"></a>type=“module”</p>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_KXMcHqWJr7" href="#c_KXMcHqWJr7" tabindex="-1" role="presentation"></a><span class="cm-keyword">export</span>
+<span class="cm-keyword">import</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_8d6sbO+wrX" href="#c_8d6sbO+wrX" tabindex="-1" role="presentation"></a><span class="cm-keyword">export</span> <span class="cm-keyword">const</span> <span class="cm-def">name</span> <span class="cm-operator">=</span> <span class="cm-string">'square'</span>;
+
+<span class="cm-keyword">export</span> <span class="cm-keyword">function</span> <span class="cm-def">draw</span>( <span class="cm-def">length</span>, <span class="cm-def">x</span>, <span class="cm-def">y</span>, <span class="cm-def">color</span>) {
+  <span class="cm-keyword">return</span> {
+    <span class="cm-property">length</span>: <span class="cm-variable-2">length</span>,
+    <span class="cm-property">x</span>: <span class="cm-variable-2">x</span>,
+    <span class="cm-property">y</span>: <span class="cm-variable-2">y</span>,
+    <span class="cm-property">color</span>: <span class="cm-variable-2">color</span>
+  };
+}</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_1x+SuVlCJG" href="#c_1x+SuVlCJG" tabindex="-1" role="presentation"></a><span class="cm-keyword">export</span> { <span class="cm-variable">name</span>, <span class="cm-variable">draw</span>, <span class="cm-variable">reportArea</span>, <span class="cm-variable">reportPerimeter</span> };</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_qhSYgYVJYW" href="#c_qhSYgYVJYW" tabindex="-1" role="presentation"></a><span class="cm-keyword">import</span> { <span class="cm-def">name</span>, <span class="cm-def">draw</span>, <span class="cm-def">reportArea</span>, <span class="cm-def">reportPerimeter</span> } <span class="cm-keyword">from</span> <span class="cm-string">'./modules/square.js'</span>;</pre>
+
+<h2><a class="h_ident" id="h_o+cFzGGhnz" href="#h_o+cFzGGhnz" tabindex="-1" role="presentation"></a>Generators</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_XnWrotBTg1" href="#c_XnWrotBTg1" tabindex="-1" role="presentation"></a><span class="cm-variable">Generator</span>
+<span class="cm-variable">GeneratorFunction</span>
+<span class="cm-variable">AsyncGeneratorFunction</span>
+<span class="cm-variable">AsyncGenerator</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_F1k0cng6dz" href="#c_F1k0cng6dz" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span><span class="cm-keyword">*</span> <span class="cm-def">generator</span>() {
+  <span class="cm-keyword">yield</span> <span class="cm-number">1</span>;
+  <span class="cm-keyword">yield</span> <span class="cm-number">2</span>;
+  <span class="cm-keyword">yield</span> <span class="cm-number">3</span>;
+}
+<span class="cm-keyword">const</span> <span class="cm-def">gen</span> <span class="cm-operator">=</span> <span class="cm-variable">generator</span>(); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">gen</span>.<span class="cm-property">next</span>().<span class="cm-property">value</span>); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">generator</span>().<span class="cm-property">next</span>().<span class="cm-property">value</span>); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">generator</span>().<span class="cm-property">next</span>().<span class="cm-property">value</span>);</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_UVni5SXaTJ" href="#c_UVni5SXaTJ" tabindex="-1" role="presentation"></a><span class="cm-keyword">function</span><span class="cm-keyword">*</span> <span class="cm-def">infinite</span>() {
+    <span class="cm-keyword">let</span> <span class="cm-def">index</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+
+    <span class="cm-keyword">while</span> (<span class="cm-atom">true</span>) {
+        <span class="cm-keyword">yield</span> <span class="cm-variable-2">index</span><span class="cm-operator">++</span>;
+    }
+}
+
+<span class="cm-keyword">const</span> <span class="cm-def">generator</span> <span class="cm-operator">=</span> <span class="cm-variable">infinite</span>(); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">generator</span>.<span class="cm-property">next</span>().<span class="cm-property">value</span>); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">generator</span>.<span class="cm-property">next</span>().<span class="cm-property">value</span>); 
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">generator</span>.<span class="cm-property">next</span>().<span class="cm-property">value</span>);</pre>
+
+<h2><a class="h_ident" id="h_sdRy5CTAP/" href="#h_sdRy5CTAP/" tabindex="-1" role="presentation"></a>Promises</h2>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_P73nZnJTzz" href="#c_P73nZnJTzz" tabindex="-1" role="presentation"></a><span class="cm-variable">Promise</span>
+<span class="cm-variable">AsyncFunction</span></pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_WCrIoXa7he" href="#c_WCrIoXa7he" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">CallServer</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Promise</span>((<span class="cm-def">resolve</span>, <span class="cm-def">reject</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">setTimeout</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">resolve</span>(<span class="cm-string">'You have done.'</span>);
+  }, <span class="cm-number">300</span>);
+});
+
+<span class="cm-variable">CallServer</span>.<span class="cm-property">then</span>((<span class="cm-def">value</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">value</span>);
+});
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">CallServer</span>);</pre>
+
+<pre class="snippet cm-s-default" data-language="javascript" ><a class="c_ident" id="c_Rtpccv4XQA" href="#c_Rtpccv4XQA" tabindex="-1" role="presentation"></a><span class="cm-keyword">const</span> <span class="cm-def">CallServer</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Promise</span>((<span class="cm-def">resolve</span>, <span class="cm-def">reject</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">setTimeout</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">resolve</span>(<span class="cm-string">'You have done.'</span>);
+  }, <span class="cm-number">300</span>);
+});
+
+<span class="cm-keyword">async</span> <span class="cm-keyword">function</span> <span class="cm-def">asyncCall</span>() {
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">'calling'</span>);
+  <span class="cm-keyword">const</span> <span class="cm-def">result</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable">CallServer</span>();
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">result</span>);
+}
+
+<span class="cm-variable">asyncCall</span>()</pre>
+
+<h2><a class="h_ident" id="h_O3eC/wXinG" href="#h_O3eC/wXinG" tabindex="-1" role="presentation"></a>Extras</h2>
+
+<p><a class="p_ident" id="p_ngf8NtQqX7" href="#p_ngf8NtQqX7" tabindex="-1" role="presentation"></a><a href="https://developer.mozilla.org/en-US/">Web reference</a></p>
+
+<p><a class="p_ident" id="p_tr5RTAJlTE" href="#p_tr5RTAJlTE" tabindex="-1" role="presentation"></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Data types</a></p>
+
+<p><a class="p_ident" id="p_w1UPTx19Au" href="#p_w1UPTx19Au" tabindex="-1" role="presentation"></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JS reference</a></p><nav><a href="00_workshop.html" title="previous chapter">◀</a> <a href="index.html" title="cover">◆</a></nav>
+</article>
